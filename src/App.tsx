@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/home/index2";
 import About from "./pages/about";
-import Projects from "./pages/projects";
+import Projects from "./pages/projects/index2";
 import Contact from "./pages/contact";
+
+import Header from "./layout/header/index";
 
 const GlobalStyles = createGlobalStyle`
   *, 
@@ -46,6 +48,7 @@ const App = () => {
             <GlobalStyles />
             <ThemeProvider theme={theme}>
                 <Router>
+                    <Header />
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route exact path="/about" component={About} />

@@ -59,10 +59,10 @@ const Layout: React.FunctionComponent<Props> = ({ children, isFooterPresent }) =
 
     return (
         <LayoutContainer>
-            <PagesLink isNavbarOpen={isNavbarOpen} />
-            <Backdrop isNavbarOpen={isNavbarOpen} />
+            {/* <PagesLink isNavbarOpen={isNavbarOpen} />
+            <Backdrop isNavbarOpen={isNavbarOpen} /> */}
             {/* <Hamburger handleShowNavbar={handleShowNavbar} isNavbarOpen={isNavbarOpen} /> */}
-            <Header />
+            {/* <Header /> */}
             <Body>{children}</Body>
             <ul className="contact__links-wrapper">
                 {ALL_CONTACTS.map((contact, i) => {

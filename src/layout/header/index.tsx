@@ -5,12 +5,16 @@ import { Link } from "react-router-dom";
 const HeaderContainer = styled.div`
     width: 100%;
     height: 70px;
-    // background-color: #faf9f9;
+    background-color: #faf9f9;
+    color: #000;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 8rem;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
 
     @media (max-width: 765px) {
         position: fixed;
@@ -28,7 +32,7 @@ const HeaderContainer = styled.div`
                 text-decoration: none;
                 margin-right: 2.4rem;
                 font-size: 1.6rem;
-                color: #fff;
+                color: #000;
 
                 &:hover {
                     text-decoration: underline;
