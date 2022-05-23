@@ -27,6 +27,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: sans-serif;
     font-family: 'Inter', sans-serif;
     color: rgb(204, 214, 246);
+    // background-color: #1f2743;
+    background-color: #000;
   }
 
   h1{

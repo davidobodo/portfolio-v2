@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const LayoutContainer = styled.div`
-    height: 100vh;
-    background-color: #1f2743;
+    height: calc(100vh - 90px);
+    // background-color: #1f2743;
     color: #fff;
 
     .contact__links-wrapper {
@@ -21,8 +21,8 @@ export const LayoutContainer = styled.div`
 `;
 
 export const Body = styled.div`
-    min-height: calc(100vh - 140px);
     padding: 0 10vw;
+    height: 100%;
 
     @media (max-width: 765px) {
         padding: 80px 20px 0px;

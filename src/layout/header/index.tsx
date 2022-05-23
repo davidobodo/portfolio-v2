@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/icons/Logo";
 
 const HeaderContainer = styled.div`
     width: 100%;
-    height: 70px;
-    background-color: #faf9f9;
-    color: #000;
+    height: 90px;
+    // background-color: #faf9f9;
+    color: #fff;
     top: 0;
     display: flex;
     align-items: center;
@@ -21,6 +22,13 @@ const HeaderContainer = styled.div`
         z-index: 1;
     }
 
+    .logo-wrapper {
+        svg {
+            width: 8rem;
+            height: 4rem;
+        }
+    }
+
     ul {
         display: flex;
         align-items: center;
@@ -30,19 +38,29 @@ const HeaderContainer = styled.div`
         li {
             a {
                 text-decoration: none;
-                margin-right: 2.4rem;
+                margin-right: 2rem;
                 font-size: 1.6rem;
-                color: #000;
+                padding: 12px 20px;
+                color: ${({ theme }) => theme.colors.textColor};
 
                 &:hover {
-                    text-decoration: underline;
+                    background-color: red;
+                    border-radius: 1rem;
                 }
             }
+        }
 
-            &:last-child {
-                a {
-                    margin-right: 0px;
-                }
+        button {
+            color: #fff;
+            font-size: 1.6rem;
+            background-color: transparent;
+            border: 0px;
+            padding: 12px 20px;
+            color: ${({ theme }) => theme.colors.textColor};
+
+            &:hover {
+                background-color: red;
+                border-radius: 1rem;
             }
         }
     }
@@ -51,7 +69,9 @@ const HeaderContainer = styled.div`
 const Header = () => {
     return (
         <HeaderContainer>
-            <div>OD</div>
+            <Link className="logo-wrapper" to="/">
+                <Logo color="rgb(204, 214, 246)" />
+            </Link>
             <ul>
                 <li>
                     <Link to="/">Home</Link>
@@ -65,6 +85,7 @@ const Header = () => {
                 <li>
                     <Link to="/contact">Contact</Link>
                 </li>
+                <button>Resume</button>
             </ul>
         </HeaderContainer>
     );

@@ -64,23 +64,24 @@ const Layout: React.FunctionComponent<Props> = ({ children, isFooterPresent }) =
             {/* <Hamburger handleShowNavbar={handleShowNavbar} isNavbarOpen={isNavbarOpen} /> */}
             {/* <Header /> */}
             <Body>{children}</Body>
-            <ul className="contact__links-wrapper">
-                {ALL_CONTACTS.map((contact, i) => {
-                    const { Icon, link, label } = contact;
-                    return (
-                        <li key={i}>
-                            {/* <i className={icon}></i> */}
-                            <a href={link} target="_blank" rel="noopener noreferrer">
-                                {/* {label} */}
-                                <Icon />
-                            </a>
-                        </li>
-                    );
-                })}
-            </ul>
             {/* {isFooterPresent && <Footer />} */}
         </LayoutContainer>
     );
 };
 
 export default Layout;
+
+{
+    /* <ul className="contact__links-wrapper">
+{ALL_CONTACTS.map((contact, i) => {
+    const { Icon, link, label } = contact;
+    return (
+        <li key={i}>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+                <Icon />
+            </a>
+        </li>
+    );
+})}
+</ul> */
+}
